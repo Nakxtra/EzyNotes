@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
+    <link rel="manifest" href="Images/site.webmanifest">
+
+    
+</head>
+<body>
+    <div class="top"><a href="#"><i class="fas fa-angle-up"></i></a></div>
+    <div class="nav">
+        <div class="logo"><img class="img" src="Images/favicon-32x32.png" alt="">EzyNotes</div>
+        <div class="opt">
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#notes">SAVED NOTES</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="top-cont" id="home">
+        <div class="cont1 cont">
+            <div class="head">
+                <i class="fas fa-ellipsis-h"></i>
+                <div class="name"><img src="Images/favicon-32x32.png" alt=""></div>
+                <i class="fas fa-pen"></i>
+                <div class="color">
+                    <div class="purple"></div>
+                    <div class="blue"></div>
+                    <div class="yellow"></div>
+                    <div class="pink"></div>
+                    <div class="green"></div>
+                    <div class="orange"></div>
+                </div>
+            </div>
+            <div class="content">
+                <input spellcheck="false" placeholder="Title" type="text" name="title" id="title" required>
+                <textarea spellcheck="false" name="text" id="text" cols="" rows=""></textarea>
+                <button type="submit" class="submit">SAVE</button>
+            </div>
+        </div>
+        <div class="cont2 cont"></div>
+        <div class="cont3 cont"></div>
+    </div>
+    <div class="box-cont" id="notes">
+        <div class="save-head"><span>SAVED NOTES</span> </div>
+        <div class="box"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
