@@ -188,6 +188,12 @@ body::-webkit-scrollbar {
     align-items: center;
 }
 
+.top-cont .cont1 .title{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
 .top-cont .cont1 #title{
     height: 2rem;
     width: 100%;
@@ -198,6 +204,19 @@ body::-webkit-scrollbar {
     color: #9B9C9C;
     font-weight: bold;
     font-size: 1.3rem;
+}
+
+.top-cont .cont1 .title span{
+    padding-left: 1rem;
+}
+
+.top-cont .cont1 .title span i{
+    color: var(--black);
+    font-size: 1.2rem;
+}
+
+.top-cont .cont1 .title span i:hover{
+    cursor: pointer;
 }
 
 .top-cont .cont1 #text{

@@ -9,6 +9,7 @@ var dot = document.querySelector('.fa-ellipsis-h');
 var style = getComputedStyle(document.body);
 var save_head = document.querySelector('.save-head');
 var color = document.querySelector('.color')
+var mic = document.querySelector('.fa-microphone')
 
 pen.addEventListener('click', ()=>{
     title.focus();
@@ -16,6 +17,54 @@ pen.addEventListener('click', ()=>{
 
 dot.addEventListener('click', ()=>{
     color.classList.toggle('active');
+});
+
+var r = document.querySelector(':root');
+
+var purple = document.querySelector('.purple');
+purple.addEventListener('click', ()=>{
+    r.style.setProperty('--black', '#5f0a87');
+    r.style.setProperty('--orange', '#e5bdf6');
+})
+
+var blue = document.querySelector('.blue');
+blue.addEventListener('click', ()=>{
+    r.style.setProperty('--black', '#647dee');
+    r.style.setProperty('--orange', '#dff9fb');
+})
+
+var yellow = document.querySelector('.yellow');
+yellow.addEventListener('click', ()=>{
+    r.style.setProperty('--black', '#000000');
+    r.style.setProperty('--orange', '#fffa65');
+})
+
+var pink = document.querySelector('.pink');
+pink.addEventListener('click', ()=>{
+    r.style.setProperty('--black', '#000000');
+    r.style.setProperty('--orange', '#ffcccc');
+})
+
+var green = document.querySelector('.green');
+green.addEventListener('click', ()=>{
+    r.style.setProperty('--black', '#9EC862');
+    r.style.setProperty('--orange', '#ECFAF5');
+})
+
+var orange = document.querySelector('.orange');
+orange.addEventListener('click', ()=>{
+    r.style.setProperty('--black', '#000000');
+    r.style.setProperty('--orange', '#fad390');
+})
+
+mic.addEventListener('click', ()=>{
+    let recognition = new webkitSpeechRecognition();
+    recognition.lang = "en-GB";
+    recognition.onresult = function(event) {
+        console.log(event);
+        title.value = event.results[0][0].transcript;
+    }
+    recognition.start();
 })
 
 var x, y, i=1;
@@ -76,43 +125,6 @@ window.onclick = function(e) {
     }
 }
 
-var r = document.querySelector(':root');
-
-var purple = document.querySelector('.purple');
-purple.addEventListener('click', ()=>{
-    r.style.setProperty('--black', '#5f0a87');
-    r.style.setProperty('--orange', '#e5bdf6');
-})
-
-var blue = document.querySelector('.blue');
-blue.addEventListener('click', ()=>{
-    r.style.setProperty('--black', '#647dee');
-    r.style.setProperty('--orange', '#dff9fb');
-})
-
-var yellow = document.querySelector('.yellow');
-yellow.addEventListener('click', ()=>{
-    r.style.setProperty('--black', '#000000');
-    r.style.setProperty('--orange', '#fffa65');
-})
-
-var pink = document.querySelector('.pink');
-pink.addEventListener('click', ()=>{
-    r.style.setProperty('--black', '#000000');
-    r.style.setProperty('--orange', '#ffcccc');
-})
-
-var green = document.querySelector('.green');
-green.addEventListener('click', ()=>{
-    r.style.setProperty('--black', '#9EC862');
-    r.style.setProperty('--orange', '#ECFAF5');
-})
-
-var orange = document.querySelector('.orange');
-orange.addEventListener('click', ()=>{
-    r.style.setProperty('--black', '#000000');
-    r.style.setProperty('--orange', '#fad390');
-})
 
 
 
